@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
+const socialLinks = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/nitin-kumar-a003863a8', Icon: Linkedin },
+  { label: 'Instagram', href: 'https://www.instagram.com/its_not_humann', Icon: Instagram },
+];
+
 const links = {
   Services: ['Lead Response AI', 'WhatsApp Automation', 'Email Sequences', 'CRM Automation', 'Appointment Booking'],
   Company: ['About GrowthMate', 'How It Works', 'Results & Case Studies', 'Blog', 'Contact'],
