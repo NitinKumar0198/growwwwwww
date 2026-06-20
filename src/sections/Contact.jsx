@@ -167,8 +167,8 @@ export default function Contact() {
             </motion.div>
 
             {[
-              { icon: Mail, label: 'Email', value: 'hello@growthmate.io', color: '#00D4FF' },
-              { icon: MessageSquare, label: 'WhatsApp', value: '+1 (555) 000-0000', color: '#00FF94' },
+              { icon: Mail, label: 'Email', value: 'nitin.k.automation@gmail.com', color: '#00D4FF' },
+              { icon: MessageSquare, label: 'WhatsApp', value: '+91 8267989860', color: '#00FF94' },
             ].map(({ icon: Icon, label, value, color }, i) => (
               <motion.div
                 key={label}
