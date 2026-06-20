@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Instagram, Linkedin } from 'lucide-react';
 
 const socialLinks = [
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/nitin-kumar-a003863a8', Icon: Linkedin },
@@ -43,19 +43,20 @@ export default function Footer() {
               AI-powered sales automation for US real estate agents. Stop chasing. Start closing.
             </p>
             <div style={{ display: 'flex', gap: '0.75rem' }}>
-              {['in', 'tw', 'ig'].map(s => (
-                <div key={s} style={{
-                  width: 32, height: 32, borderRadius: 8,
-                  background: 'rgba(240,244,255,0.06)', border: '1px solid rgba(240,244,255,0.08)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: 11, fontWeight: 600, color: 'rgba(240,244,255,0.4)',
-                  cursor: 'pointer', transition: 'background 0.2s, border-color 0.2s',
-                }}
-                  onMouseEnter={e => { e.currentTarget.style.background = 'rgba(0,212,255,0.1)'; e.currentTarget.style.borderColor = 'rgba(0,212,255,0.3)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.background = 'rgba(240,244,255,0.06)'; e.currentTarget.style.borderColor = 'rgba(240,244,255,0.08)'; }}
+              {socialLinks.map(({ label, href, Icon }) => (
+                <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label}
+                  style={{
+                    width: 32, height: 32, borderRadius: 8,
+                    background: 'rgba(240,244,255,0.06)', border: '1px solid rgba(240,244,255,0.08)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    color: 'rgba(240,244,255,0.65)',
+                    transition: 'background 0.2s, border-color 0.2s, color 0.2s',
+                  }}
+                  onMouseEnter={e => { e.currentTarget.style.background = 'rgba(0,212,255,0.1)'; e.currentTarget.style.borderColor = 'rgba(0,212,255,0.3)'; e.currentTarget.style.color = '#00D4FF'; }}
+                  onMouseLeave={e => { e.currentTarget.style.background = 'rgba(240,244,255,0.06)'; e.currentTarget.style.borderColor = 'rgba(240,244,255,0.08)'; e.currentTarget.style.color = 'rgba(240,244,255,0.65)'; }}
                 >
-                  {s}
-                </div>
+                  <Icon size={16} />
+                </a>
               ))}
             </div>
           </div>
